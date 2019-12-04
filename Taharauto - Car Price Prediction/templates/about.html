@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-6" style="background-color: #ffc107; height: calc(100vh - 60px);" >
+        <h5 class="content-about">
+        The rise of used car enthusiasts makes the price of used cars more varied.
+        Seeing this phenomenon I took the initiative to help novice fans to find out the estimated price of the cars.
+        </h5>
+        <h5 class="content-about2">
+        <span class="tahar-black-white">TAHARAUTO</span> is a system created to predict the price of used cars. 
+        This prediction system is based on a dataset in Kaggle.
+        The data was taken from a car sales portal in America, edmunds.com. 
+        <span style="font-weight: bold;">More than 7000 cars</span> with various manufacturers such as BMW, FORD, Toyota, Audi along with each different type.
+        </h5>
+
+        <div class="about-class-type">
+            <select class="mt-3" name="Vehicle Style" id="">
+                <option value=""disabled selected>Class - 1</option>
+                {% for item in data_class1 %}
+                    <option value='{{item}}'>{{item}}</option>
+                {% endfor %} 
+            </select>
+
+            <select class="mt-3" name="Vehicle Style" id="">
+                <option value=""disabled selected>Class - 2</option>
+                {% for item in data_class2 %}
+                    <option value='{{item}}'>{{item}}</option>
+                {% endfor %} 
+            </select>
+
+            <select class="mt-3" name="Vehicle Style" id="">
+                <option value=""disabled selected>Class - 3</option>
+                {% for item in data_class3 %}
+                    <option value='{{item}}'>{{item}}</option>
+                {% endfor %} 
+            </select>
+        </div>
+
+        <h5 class="content-about2">    
+        This project divides each car variety from each manufacturer based on 3 main classes. 
+        This aims to make it easier for new players to know what car they want to know based on similar types of cars or some famaous brands.
+        </h5>
+        
+        <h5 class="content-about2">
+        The results of this prediction are <span style="font-weight: bold;">the price of a car based on the manufacturer, 
+                class type, vehicle model, vehicle transmission, driven wheels, horsepower, and year</span>.
+        </h5>
+    </div>
+
+    <div class="col-md-6" style="background-color: #6A6B6F; height: calc(100vh - 60px);">
+        <img style="margin-top: 100px; margin-left: 20px;"src="/static/images/diagram.png" alt="">
+        
+    </div>
+</div>
+
+
+        
+
+{% endblock body %}

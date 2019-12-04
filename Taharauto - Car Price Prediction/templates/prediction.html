@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+   <div class="container">
+       <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Location Input -->
+
+
+                <form action="/prediction" method="POST">
+                    <!-- Brand Input -->
+                    <select class="form-control mt-3" name="Make" id="">
+                        <option value=""disabled selected>Select Brand</option>
+                        {% for item in data_make %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %} 
+                    </select>
+                    
+                    <div class="form-group">
+                    
+                    <!-- Model Input -->
+                    <select class="form-control mt-3" name="Model" id="">
+                        <option value=""disabled selected>Select Model</option>
+                        {% for item in data_model %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %} 
+                    </select>
+                        
+                    <div class="form-group">
+
+                    <!-- Year Input -->
+                    <input type="number" max="2017" min="1994" name="Year"
+                        placeholder="Years" class="form-control mt-3">
+                    
+                    <!-- Fuel Type Input -->
+                    <select class="form-control mt-3" name="Engine Fuel Type" id="">
+                        <option value=""disabled selected>Select Fuel Type</option>
+                        {% for item in data_fuel_type %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %} 
+                    </select>
+                            
+                    <div class="form-group">
+
+                    <!-- Horsepower Input -->
+                    <input type="number" max="800" min="50" name="Engine HP"
+                        placeholder="Horsepower" class="form-control mt-3">
+                    
+                     <!-- Horsepower Input -->
+                    <input type="number" max="16" min="0" name="Engine Cylinders"
+                        placeholder="Cylinders" class="form-control mt-3">
+                    
+                    <select class="form-control mt-3" name="Transmission Type" id="">
+                        <option value=""disabled selected>Select Transmission</option>
+                        {% for item in data_transmision %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %} 
+                    </select>
+                                
+                    <div class="form-group">
+                    
+                    <select class="form-control mt-3" name="Driven_Wheels" id="">
+                        <option value=""disabled selected>Driven Wheels</option>
+                        {% for item in data_driven %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %} 
+                    </select>
+                                            
+                    <div class="form-group">
+                    
+                    <input type="number" max="4" min="2" name="Number of Doors"
+                        placeholder="Doors" class="form-control mt-3">
+                    
+                    <select class="form-control mt-3" name="Vehicle Size" id="">
+                        <option value=""disabled selected>Car Size</option>
+                        {% for item in data_size %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %} 
+                    </select>
+
+                    <select class="form-control mt-3" name="Vehicle Style" id="">
+                        <option value=""disabled selected>Car Style</option>
+                        {% for item in data_style %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %} 
+                    </select>
+
+                    <input type="number" max="150" min="10" name="highway MPG"
+                        placeholder="Highway MPG" class="form-control mt-3">
+                    
+                    <input type="number" max="150" min="0" name="city mpg"
+                        placeholder="City MPG" class="form-control mt-3">
+                        
+                        
+                    <button type="submit" class="btn btn-primary mt-3">Predict</button>
+                        
+                        
+                    </form>
+                </div>
+                
+            </div>
+       </div>
+
+   </div>
+{% endblock body %}

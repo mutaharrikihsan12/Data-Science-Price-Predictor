@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-5">
+        <div class="white-box px-4">
+            <!-- Brand Input -->
+            <form action="/" method="POST">
+        
+                <div  class="row">
+                    <div class="col-md-6">
+                        <select class="form-control" name="Make" id="">
+                            <option value=""disabled selected>Select Brand</option>
+                            {% for item in data_make %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %} 
+                        </select>
+                    </div>
+                
+                    <div class="col-md-6">
+                        <select class="form-control" name="Model" id="">
+                            <option value=""disabled selected>Select Model</option>
+                            {% for item in data_model %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %} 
+                        </select>
+                    </div>
+                </div>    
+                
+                <div>
+                    <select class="form-control mt-4" name="Vehicle Style" id="">
+                        <option value=""disabled selected>Select Car Style</option>
+                        {% for item in data_style %}
+                            <option value='{{item}}'>{{item}}</option>
+                        {% endfor %} 
+                    </select>
+                </div>
+
+                <div>
+                    <select class="form-control mt-4" name="Transmission Type" id="">
+                            <option value=""disabled selected>Select Transmission</option>
+                            {% for item in data_transmision %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %} 
+                    </select>
+                </div>
+
+                <div>
+                    <select class="form-control mt-4" name="Driven_Wheels" id="">
+                            <option value=""disabled selected>Driven Wheels</option>
+                            {% for item in data_driven %}
+                                <option value='{{item}}'>{{item}}</option>
+                            {% endfor %} 
+                    </select>
+                </div>
+
+                <div  class="row">
+                    <div class="col-md-6 mt-2">
+                        <input type="number" max="800" min="50" name="Engine HP"
+                            placeholder="Horsepower" class="form-control mt-3">
+                    </div>
+                
+                    <div class="col-md-6 mt-2">
+                        <input type="number" max="2017" min="1994" name="Year"
+                            placeholder="Years" class="form-control mt-3">
+                    </div>
+                </div>
+
+                <!-- <div  class="mt-4"> -->
+                <button type="submit" class="btn btn-warning btn-lg btn-block mt-4" style="font-weight: bolder;">Predict Here</button>
+                <!-- </div> -->
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <h1 class="home-title">YOUR CAR <span class="spancolor-font2"> PRICE PREDICTOR</span></h1>
+        <h5 style="color: white;">Know your used car price and make a better transaction. </h5>
+        <button type="button" class="btn btn-outline-warning "onclick="location.href='/about'"">Learn More</button>
+        
+         
+    </div>
+
+
+</div>
+
+    
+{% endblock body %}

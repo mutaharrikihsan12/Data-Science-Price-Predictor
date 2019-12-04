@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box-result px-4">
+            <div>
+                <h1 class="result-title">Your Result</h1>
+            </div>
+            <div class="mt-4 result-display"> 
+                <h5>${{hasil_pred_bawah}}</h5>
+                <h5 class="score-big">${{hasil_pred}}</h5>
+                <h5>${{hasil_pred_atas}}</h5>
+            </div> 
+            <div>
+                <div class="result-display">
+                    <div class="col-md-3 result-bar1">
+                        <h5 style="color: #A9D78F;">tes</h5>
+                    </div>
+                    <div class="col-md-3 result-bar2">
+                        <h5 style="color: #A9D78F;">tes</h5>
+                    </div>
+                    <div class="col-md-3 result-bar1">
+                        <h5 style="color: #A9D78F;">tes</h5>
+                    </div>
+                    <div class="col-md-3 result-bar2">
+                        <h5 style="color: #A9D78F;">tes</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 col-md-12 justify-content-center">
+                <table align="center">
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Values</th>
+                    </tr>
+                    <tr>
+                        <td>Brand</td>
+                        <td>{{car_table1}}</td>
+                    </tr>
+                    <tr>
+                        <td>Class</td>
+                        <td>{{car_table2}}</td>
+                    </tr>
+                    <tr>
+                        <td>Style</td>
+                        <td>{{car_table3}}</td>
+                    </tr>
+                    <tr>
+                        <td>Transmission</td>
+                        <td>{{car_table4}}</td>
+                    </tr>
+                    <tr>
+                        <td>Driven Wheels</td>
+                        <td>{{car_table5}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Horsepower</td>
+                        <td>{{car_table6}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Year</td>
+                        <td>{{car_table7}}</td>
+                    </tr>
+            </table>
+
+            <div class="mt-3 result-home-button"> 
+                <button class="btn btn-warning" onclick="location.href='/'">Home</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>        
+{% endblock body %}

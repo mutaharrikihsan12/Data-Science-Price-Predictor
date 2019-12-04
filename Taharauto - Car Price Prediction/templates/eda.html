@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="row" style="background-color: white; height: calc(100vh - 60px);">
+  <div>
+      <div class="carousel" data-ride="carousel" data-interval="30000" style="margin-top: 100px; padding-left: 100px;" id="jpweb">  
+        <div class="carousel-inner" style="justify-content: center;">
+          <div class="carousel-item active">
+            <img src="/static/images/plotlib_car_year.png">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/price_distribution.png">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/price_below.png">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/plotlib_car_distribution.png">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/plotlib_car_transmission.png">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/type_car.png">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/bmw_expensive.png">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/ford_expensive.png">
+          </div>
+          <a href="#jpweb" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon" style="outline: black; border: 1px solid black;"></span>
+          </a>
+
+          <button type="button" class="btn btn-outline-warning "onclick="location.href='/about'"">Learn More</button>
+        </div>
+        <button type="button" class="btn btn-outline-warning "onclick="location.href='/'"">Home</button>
+      </div>
+  </div>
+</div>
+{% endblock body %}
